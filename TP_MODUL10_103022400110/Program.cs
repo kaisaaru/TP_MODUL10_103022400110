@@ -1,13 +1,13 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// WAJIB ADA
+// Builder
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Swagger (WAJIB)
+// Swagger 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -16,7 +16,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// WAJIB untuk controller
+// Controllers
 app.MapControllers();
 
 app.Run();
